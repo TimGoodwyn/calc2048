@@ -1,0 +1,9 @@
+For 1->I To 4
+For 1->J To 4
+If Mat A[J,I]=0
+Then Locate 5*I-3,J,"     "
+Else Locate 5*I-3,J,Mat A[J,I]
+IfEnd
+Next
+Next
+

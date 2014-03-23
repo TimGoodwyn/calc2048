@@ -1,0 +1,43 @@
+0->M
+Locate 1,6,"  "
+Locate 1,7,"  "
+If K=28
+Then 0->X
+(-1)->Y
+IfEnd
+If K=37
+Then 0->X
+1->Y
+IfEnd
+If K=28 Or K=27 Or K=38 Or K=37
+Then For 1->I To 4
+For 2->J To 4
+If Mat A[J,I]>0
+Then J->P
+For J-1->K To 1 Step -1
+If Mat A[K,I]=0
+Then K->P
+Else Break
+IfEnd
+Next
+If P<J
+Then Mat A[J,I]->Mat A[P,I]
+0->Mat A[J,I]
+1->M
+Locate 1,6,"M1"
+Locate 4,6,I
+Locate 6,6,P
+IfEnd
+If P>1
+Then If Mat A[P,I]=Mat A[P-1,I]
+Then S+Mat A[P,I]->S
+2*Mat A[P,I]->Mat A[P-1,I]
+0->Mat A[P,I]
+1->M
+Locate 1,7,"M2"
+IfEnd
+IfEnd
+IfEnd
+Next
+Next
+IfEnd

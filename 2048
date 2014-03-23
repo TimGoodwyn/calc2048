@@ -1,0 +1,22 @@
+Prog "2048CLR"
+ClrText
+0->S
+0->Q
+0->M
+Prog "2048SPWN"
+Prog "2048DRAW"
+While Q=0
+Locate 1,5,S
+GetKey->K
+If K=5
+Then 1->Q
+Else If K=27 or K=28 Or K=37 Or K=38
+Then Prog "2048MOVE"
+If M=1
+Then Prog "2048SPWN"
+0->M
+IfEnd
+Prog "2048DRAW"
+IfEnd
+IfEnd
+WhileEnd

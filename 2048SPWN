@@ -1,0 +1,14 @@
+If 0=1
+Then "ASSUMES SPACE EXISTS"
+IfEnd
+While 1=1
+Int (Ran#*4)+1->I
+Int (Ran#*4)+1->J
+If Mat A[J,I]=0
+Then If Ran#<2/3
+Then 2->Mat A[J,I]
+Else 4->Mat A[J,I]
+IfEnd
+Break
+IfEnd
+WhileEnd

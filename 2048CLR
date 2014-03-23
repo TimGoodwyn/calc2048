@@ -1,0 +1,7 @@
+For 1->I To 4
+For 1->J To 4
+If 1=1
+Then 0->Mat A[J,I]
+IfEnd
+Next
+Next
