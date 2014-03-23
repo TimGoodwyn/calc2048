@@ -9,30 +9,41 @@ If K=37
 Then 0->X
 1->Y
 IfEnd
+If K=38
+Then (-1)->X
+0->Y
+IfEnd
+If K=27
+Then 1->X
+0->Y
+IfEnd
 If K=28 Or K=27 Or K=38 Or K=37
 Then For 1->I To 4
 For 2->J To 4
-If Mat A[J,I]>0
+Prog "2048SETC"
+If Mat A[A,B]>0
 Then J->P
-For J-1->K To 1 Step -1
-If Mat A[K,I]=0
-Then K->P
+For J-1->L To 1 Step -1
+Prog "2048SETC"
+If Mat A[C,D]=0
+Then L->P
 Else Break
 IfEnd
 Next
+Prog "2048SETC"
 If P<J
-Then Mat A[J,I]->Mat A[P,I]
-0->Mat A[J,I]
+Then Mat A[A,B]->Mat A[E,F]
+0->Mat A[A,B]
 1->M
 Locate 1,6,"M1"
 Locate 4,6,I
 Locate 6,6,P
 IfEnd
 If P>1
-Then If Mat A[P,I]=Mat A[P-1,I]
-Then S+Mat A[P,I]->S
-2*Mat A[P,I]->Mat A[P-1,I]
-0->Mat A[P,I]
+Then If Mat A[E,F]=Mat A[G,H]
+Then S+Mat A[E,F]->S
+2*Mat A[E,F]->Mat A[G,H]
+0->Mat A[E,F]
 1->M
 Locate 1,7,"M2"
 IfEnd
