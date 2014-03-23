@@ -11,7 +11,7 @@ Explanation of code
 
 TODO:
  - Remove debug printing
- - Quit other than by AC/ON? 
+ - Implement quit properly, and add a "continue" option?
  - Detecting lose (probably won't bother)
  - Add indents to code in git?
  - Bug: fix redraw issue where e.g. 2 replaces a 16 you see "26"
